@@ -2,15 +2,14 @@
   import '../app.css';
   import TodoItem from '../lib/components/TodoItem.svelte';
 
+  export let data;
+
   function generate_id() {
     return crypto.randomUUID();
   }
 
-  let todo = { id: generate_id(), description: 'test', checked: false };
-  let todo2 = { id: generate_id(), description: 'Enter the Task', checked: true };
-
-  let todos_progress = [todo];
-  let todos_completed = [todo2];
+  let todos_progress = data.todos_progress;
+  let todos_completed = data.todos_completed;
 
   function toggleTodoState(todo) {
     if (todo.checked) {
@@ -60,4 +59,3 @@
     />
   {/each}
 </div>
-

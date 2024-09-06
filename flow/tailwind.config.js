@@ -5,7 +5,6 @@ export default {
     colors: {
       dg: '#191919',
       lg: '#202020',
-      lime: '#191919',
       tcd: '#686868', // text color dark
       tcl: '#D3D3D3' // text color light
     },
